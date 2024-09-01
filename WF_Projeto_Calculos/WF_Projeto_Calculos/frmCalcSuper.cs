@@ -17,6 +17,10 @@ namespace WF_Projeto_Calculos
             InitializeComponent();
         }
 
+        bool vLimpa;
+        decimal numAnt;
+        string vOperacao;
+
         public void f_Numeros (object sender, EventArgs e)
         {
             
@@ -28,7 +32,7 @@ namespace WF_Projeto_Calculos
                (((Button)sender).Text == "," &&  // "||/ou" "!="diferente" "&&/e"  "!/NAO"
                !lblvisor.Text.Contains(","))) 
 
-               {
+            {
 
                 lblvisor.Text += ((Button)sender).Text;
             }
@@ -37,12 +41,44 @@ namespace WF_Projeto_Calculos
 
         public void f_Operacoes(object sender, EventArgs e)
         {
-
+            numAnt = decimal.Parse(lblvisor.Text);
+            vOperacao = ((Button)sender).Text;
+            vLimpa = true;
+            lblHistorico.Text += numAnt + " " + vOperacao;
+            lblvisor.Focus();
         }
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
+            decimal f_Operacoes = decimal.Parse(lblvisor.Text);
 
+            switch (vOperacao)
+            {
+                case "+":
+                    {
+                        lblvisor.Text = (numAnt + numAnt).ToString();
+                        lblHistorico.Text += numAnt + "+";
+                        break;
+                    }
+                case "-":
+                    {
+                        lblvisor.Text = (numAnt + numAnt).ToString();
+                        lblHistorico.Text += numAnt + "-";
+                        break;
+                    }
+                case "*":
+                    {
+                        lblvisor.Text = (numAnt + numAnt).ToString();
+                        lblHistorico.Text += numAnt + "*";
+                        break;
+                    }
+                case "/":
+                    {
+                        lblvisor.Text = (numAnt + numAnt).ToString();
+                        lblHistorico.Text += numAnt + "M";
+                        break;
+                    }
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

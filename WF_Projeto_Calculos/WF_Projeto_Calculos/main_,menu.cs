@@ -19,7 +19,7 @@ namespace WF_Projeto_Calculos
         //abre uma nova janela dentro da janela principal
         private void janelasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form obj
+            Form obj;
             frmCalculosBotoes objCalcBot = new frmCalculosBotoes(); //atribui formulario a variavel objCalcBot
             objCalcBot.MdiParent = this; //objCalcBot vira filho
             objCalcBot.Show(); //formulario é exibido dentro desta janela principal
