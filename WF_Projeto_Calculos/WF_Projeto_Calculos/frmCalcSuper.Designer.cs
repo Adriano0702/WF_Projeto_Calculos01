@@ -76,10 +76,12 @@ namespace WF_Projeto_Calculos
             // 
             // lblHistorico
             // 
-            this.lblHistorico.Location = new System.Drawing.Point(389, 0);
+            this.lblHistorico.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblHistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistorico.Location = new System.Drawing.Point(262, 45);
             this.lblHistorico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHistorico.Name = "lblHistorico";
-            this.lblHistorico.Size = new System.Drawing.Size(88, 18);
+            this.lblHistorico.Size = new System.Drawing.Size(209, 26);
             this.lblHistorico.TabIndex = 1;
             // 
             // groupBox1
