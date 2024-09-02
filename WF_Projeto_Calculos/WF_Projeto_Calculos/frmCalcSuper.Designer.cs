@@ -56,7 +56,7 @@ namespace WF_Projeto_Calculos
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button22 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.limpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -369,7 +369,7 @@ namespace WF_Projeto_Calculos
             // 
             this.groupBox5.Controls.Add(this.button22);
             this.groupBox5.Controls.Add(this.button21);
-            this.groupBox5.Controls.Add(this.button20);
+            this.groupBox5.Controls.Add(this.limpar);
             this.groupBox5.Location = new System.Drawing.Point(280, 85);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
@@ -402,16 +402,17 @@ namespace WF_Projeto_Calculos
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.f_Numeros);
             // 
-            // button20
+            // limpar
             // 
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(69, 12);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(50, 29);
-            this.button20.TabIndex = 16;
-            this.button20.Text = "C";
-            this.button20.UseVisualStyleBackColor = true;
+            this.limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.limpar.Location = new System.Drawing.Point(69, 12);
+            this.limpar.Margin = new System.Windows.Forms.Padding(2);
+            this.limpar.Name = "limpar";
+            this.limpar.Size = new System.Drawing.Size(50, 29);
+            this.limpar.TabIndex = 16;
+            this.limpar.Text = "C";
+            this.limpar.UseVisualStyleBackColor = true;
+            this.limpar.Click += new System.EventHandler(this.limpar_Click);
             // 
             // frmCalcSuper
             // 
@@ -462,6 +463,6 @@ namespace WF_Projeto_Calculos
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button limpar;
     }
 }

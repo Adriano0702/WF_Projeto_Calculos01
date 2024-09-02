@@ -104,16 +104,12 @@ namespace WF_Projeto_Calculos
 
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void limpar_Click(object sender, EventArgs e)
         {
+            //limpar visor 
+            lblvisor.Text = "0";
+
 
         }
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-       
     }
 }
