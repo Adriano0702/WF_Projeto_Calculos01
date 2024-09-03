@@ -54,9 +54,9 @@ namespace WF_Projeto_Calculos
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.btnLimparVisor = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -367,9 +367,9 @@ namespace WF_Projeto_Calculos
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button22);
-            this.groupBox5.Controls.Add(this.button21);
-            this.groupBox5.Controls.Add(this.button20);
+            this.groupBox5.Controls.Add(this.btnLimparVisor);
+            this.groupBox5.Controls.Add(this.btnApagar);
+            this.groupBox5.Controls.Add(this.btnLimpar);
             this.groupBox5.Location = new System.Drawing.Point(280, 85);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
@@ -379,39 +379,41 @@ namespace WF_Projeto_Calculos
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "groupBox5";
             // 
-            // button22
+            // btnLimparVisor
             // 
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(4, 12);
-            this.button22.Margin = new System.Windows.Forms.Padding(2);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(46, 29);
-            this.button22.TabIndex = 18;
-            this.button22.Text = "CE";
-            this.button22.UseVisualStyleBackColor = true;
+            this.btnLimparVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparVisor.Location = new System.Drawing.Point(4, 12);
+            this.btnLimparVisor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimparVisor.Name = "btnLimparVisor";
+            this.btnLimparVisor.Size = new System.Drawing.Size(46, 29);
+            this.btnLimparVisor.TabIndex = 18;
+            this.btnLimparVisor.Text = "CE";
+            this.btnLimparVisor.UseVisualStyleBackColor = true;
+            this.btnLimparVisor.Click += new System.EventHandler(this.btnLimparVisor_Click);
             // 
-            // button21
+            // btnApagar
             // 
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(137, 12);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(50, 31);
-            this.button21.TabIndex = 17;
-            this.button21.Text = "<--";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.f_Numeros);
+            this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.Location = new System.Drawing.Point(137, 12);
+            this.btnApagar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(50, 31);
+            this.btnApagar.TabIndex = 17;
+            this.btnApagar.Text = "<--";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
-            // button20
+            // btnLimpar
             // 
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(69, 12);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(50, 29);
-            this.button20.TabIndex = 16;
-            this.button20.Text = "C";
-            this.button20.UseVisualStyleBackColor = true;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(69, 12);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(50, 29);
+            this.btnLimpar.TabIndex = 16;
+            this.btnLimpar.Text = "C";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // frmCalcSuper
             // 
@@ -460,8 +462,8 @@ namespace WF_Projeto_Calculos
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button btnIgual;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button btnLimparVisor;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

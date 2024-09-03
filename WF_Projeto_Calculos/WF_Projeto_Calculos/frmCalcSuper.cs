@@ -23,6 +23,12 @@ namespace WF_Projeto_Calculos
 
         public void f_Numeros (object sender, EventArgs e)
         {
+            if (lblvisor.Text == "0") lblvisor.Text = "";
+            if (vLimpa)
+            {
+                lblvisor.Text = "";
+                vLimpa = false;
+            }
             // Se o visor estiver em zero eo botão acionado não for virgula, limpar ele para adicionar um novo número
             if (lblvisor.Text == "0" && ((Button)sender).Text != ",")
                 
@@ -45,16 +51,10 @@ namespace WF_Projeto_Calculos
             numAnt = decimal.Parse(lblvisor.Text); 
             
             //armazena operação selecionada
-            vOperacao = ((Button)sender).Text;
-
-            //
-            vLimpa = true;
+            vOperacao = ((Button)sender).Text;           
 
             // Atuliza o historico com número atual e a operação selecionada
-            lblHistorico.Text += numAnt + " " + vOperacao+ "";
-
-            //limpa o visor para proxima entrada
-            lblvisor.Text = string.Empty;
+            lblHistorico.Text += numAnt + " " + vOperacao+ "";            
 
             //Foca o visor, preparando para proxima entrada do usuario
             lblvisor.Focus();
@@ -104,16 +104,31 @@ namespace WF_Projeto_Calculos
 
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
+            //limpa o visor 
+            lblvisor.Text = "0";
 
+            //limpa o historioco
+            lblHistorico.Text = "";
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void btnLimparVisor_Click(object sender, EventArgs e)
         {
-        
+            //limpa o historico
+            lblHistorico.Text = "";
         }
 
-       
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            //remove o ultimo caracter do texto mostrado no visor 
+            lblvisor.Text = lblvisor.Text.Substring(0, lblvisor.Text.Length - 1);
+
+            //se tela estiver vazia colocar zero
+            if(lblvisor.Text == "")
+            {
+                lblvisor.Text = "0";
+            }
+        }
     }
 }
